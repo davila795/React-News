@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
-const New = ({ article }) => {
+const Article = ({ article }) => {
   const { url, source, description, title, urlToImage } = article
 
   const image = urlToImage ?
@@ -31,4 +32,8 @@ const New = ({ article }) => {
   );
 }
 
-export default New;
+Article.propTypes = {
+  article:PropTypes.object.isRequired
+}
+
+export default Article;

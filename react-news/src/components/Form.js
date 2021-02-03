@@ -1,6 +1,7 @@
 import React from 'react';
 import useSelect from '../hooks/useSelect';
 import styles from './Form.module.css'
+import PropTypes from 'prop-types';
 
 const Form = ({ setCategory }) => {
   const categories = [
@@ -33,12 +34,17 @@ const Form = ({ setCategory }) => {
             <input
               type="submit"
               className={`${styles.btn_block} btn-large amber darken-2`}
+              value='Search'
             />
           </div>
         </form>
       </div>
     </div>
   );
+}
+
+Form.propTypes = {
+  setCategory: PropTypes.func.isRequired
 }
 
 export default Form;
